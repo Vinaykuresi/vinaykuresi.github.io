@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" async></script>
+
+</head>
+
+<body>
+    <script>
+        // Some code thanks to @chrisgannon
+
+        var select = function (s) {
+            return document.querySelector(s);
+        }
+
+        function randomBetween(min, max) {
+            var number = Math.floor(Math.random() * (max - min + 1) + min);
+
+            if (number !== 0) {
+                return number;
+            } else {
+                return 0.5;
+            }
+        }
+
+        var tl = new TimelineMax();
+
+        for (var i = 0; i < 20; i++) {
+
+            var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
+                x: randomBetween(12, 15) * (randomBetween(-1, 1)),
+                y: randomBetween(12, 15) * (randomBetween(-1, 1)),
+                repeat: -1,
+                repeatDelay: randomBetween(0.2, 0.5),
+                yoyo: true,
+                ease: Elastic.easeOut.config(1, 0.5)
+            })
+
+            tl.add(t, (i + 1) / 0.6)
+        }
+
+        tl.seek(50);
+    </script>
+    <div class="resume-wrapper">
+        <section class="profile section-padding">
+            <div class="container">
+                <div class="picture-resume-wrapper">
+                    <div class="picture-resume">
+                        <span><img src="https://i.ibb.co/cXJnBB9/kuresi.jpg" alt="" /></span>
+                        <svg version="1.1" viewBox="0 0 350 350">
+
+                            <defs>
+                                <filter id="goo">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                                    <feColorMatrix in="blur" mode="matrix"
+                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+                                </filter>
+                            </defs>
+
+
+                            <g filter="url(url(#goo))">
+
+                                <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130" />
+
+                                <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7" />
+                                <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7" />
+
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="name-wrapper">
+                    <h1>John <br />Anderson</h1><!-- YOUR NAME AND LAST NAME  -->
+                </div>
+                <div class="clearfix"></div>
+                <div class="contact-info clearfix">
+                    <ul class="list-titles">
+                        <li>Call</li>
+                        <li>Mail</li>
+                        <li>Web</li>
+                        <li>Home</li>
+                    </ul>
+                    <ul class="list-content ">
+                        <li style="color:black;">+91-9154549566</li> <!-- YOUR PHONE NUMBER  -->
+                        <li style="color:black;">Vinay.js@outlook.com</li> <!-- YOUR EMAIL -->
+                        <li style="color:black;"><a href="#">Vinay.Github.IO</a></li> <!-- YOUR WEBSITE  -->
+                        <li style="color:black;">Bangalore, Karnataka</li> <!-- YOUR STATE AND COUNTRY  -->
+                    </ul>
+                </div>
+                <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
+                    <p><span class="bold">Versatile, high-energy professional</span> offering experience in designing &
+                        developing web-based applications, and managing various technical projects; targeting
+                        assignments in Banking, E- commerce and Healthcare Domain as Senior Software Engineer or
+                        Technical Lead. </p>
+                </div>
+                <div class="contact-social clearfix">
+                    <ul class="list-titles">
+                        <li>Linkedin</li>
+                    </ul>
+                    <ul class="list-content">
+                        <li><a href="https://www.linkedin.com/in/vinay-kumar-kuresi/">Vinay Kumar K</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section-padding">
+            <div class="container">
+                <h3 class="experience-title">Experience</h3>
+
+                <div class="experience-wrapper">
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title">Connx AI</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time">May 2022 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title">UI & Full- Stack Developer </div> <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p>Solutions offers web-based Artificial Intelligence (AI)- and Big Data supported software
+                                solutions and study logistic support for health care organizations, public and private
+                                health care providers as well as physicians in medical care. Our focus is on the
+                                multivariate prediction of disease trajectories to optimize medical decision-making and
+                                to provide a solid database for health policy decisions.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time">Nov 2010 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title">Freelance, Web Designer / Web Developer</div> <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis,
+                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time">Nov 2009 - Nov 2010</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title">Web Designer </div> <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis,
+                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                </div><!--Skill experience-->
+
+                <div class="section-wrapper clearfix">
+                    <h3 class="section-title">Skills</h3> <!-- YOUR SET OF SKILLS  -->
+                    <ul>
+                        <li class="skill-percentage">HTML / HTML5</li>
+                        <li class="skill-percentage">CSS / CSS3 / SASS / LESS</li>
+                        <li class="skill-percentage">Javascript</li>
+                        <li class="skill-percentage">Jquery</li>
+                        <li class="skill-percentage">Wordpress</li>
+                        <li class="skill-percentage">Photoshop</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="section-wrapper clearfix">
+                    <h3 class="section-title">Hobbies</h3> <!-- DESCRIPTION OF YOUR HOBBIES -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo
+                        in, dignissim magna.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo
+                        in, dignissim magna.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+    </div>
+</body>
+
+</html>
