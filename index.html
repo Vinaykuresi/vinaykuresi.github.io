@@ -1,198 +1,264 @@
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Vinay Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
     <script src="script.js" async></script>
+    <link
+      id="favicon"
+      rel="shortcut icon"
+      href="./assets/favicon.png"
+      type="image/x-png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-</head>
-
-<body>
-    <script>
-        // Some code thanks to @chrisgannon
-
-        var select = function (s) {
-            return document.querySelector(s);
-        }
-
-        function randomBetween(min, max) {
-            var number = Math.floor(Math.random() * (max - min + 1) + min);
-
-            if (number !== 0) {
-                return number;
-            } else {
-                return 0.5;
-            }
-        }
-
-        var tl = new TimelineMax();
-
-        for (var i = 0; i < 20; i++) {
-
-            var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
-                x: randomBetween(12, 15) * (randomBetween(-1, 1)),
-                y: randomBetween(12, 15) * (randomBetween(-1, 1)),
-                repeat: -1,
-                repeatDelay: randomBetween(0.2, 0.5),
-                yoyo: true,
-                ease: Elastic.easeOut.config(1, 0.5)
-            })
-
-            tl.add(t, (i + 1) / 0.6)
-        }
-
-        tl.seek(50);
-    </script>
-    <div class="resume-wrapper">
-        <section class="profile section-padding">
-            <div class="container">
-                <div class="picture-resume-wrapper">
-                    <div class="picture-resume">
-                        <span><img src="https://i.ibb.co/cXJnBB9/kuresi.jpg" alt="" /></span>
-                        <svg version="1.1" viewBox="0 0 350 350">
-
-                            <defs>
-                                <filter id="goo">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-                                    <feColorMatrix in="blur" mode="matrix"
-                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
-                                </filter>
-                            </defs>
-
-
-                            <g filter="url(url(#goo))">
-
-                                <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130" />
-
-                                <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7" />
-                                <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7" />
-
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="name-wrapper">
-                    <h1>Vinay <br />Kumar K</h1><!-- YOUR NAME AND LAST NAME  -->
-                </div>
-                <div class="clearfix"></div>
-                <div class="contact-info clearfix">
-                    <ul class="list-titles">
-                        <li>Call</li>
-                        <li>Mail</li>
-                        <li>Web</li>
-                        <li>Home</li>
-                    </ul>
-                    <ul class="list-content ">
-                        <li style="color:black;">+91-9154549566</li> <!-- YOUR PHONE NUMBER  -->
-                        <li style="color:black;">Vinay.js@outlook.com</li> <!-- YOUR EMAIL -->
-                        <li style="color:black;"><a href="#">VinayKuresi.Github.IO</a></li> <!-- YOUR WEBSITE  -->
-                        <li style="color:black;">Bangalore, Karnataka</li> <!-- YOUR STATE AND COUNTRY  -->
-                    </ul>
-                </div>
-                <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
-                    <p><span class="bold">Versatile, high-energy professional</span> offering experience in designing &
-                        developing web-based applications, and managing various technical projects; targeting
-                        assignments in Banking, E- commerce and Healthcare Domain as Senior Software Engineer or
-                        Technical Lead. </p>
-                </div>
-                <div class="contact-social clearfix">
-                    <ul class="list-titles">
-                        <li>Linkedin</li>
-                    </ul>
-                    <ul class="list-content">
-                        <li><a href="https://www.linkedin.com/in/vinay-kumar-kuresi/">Vinay Kumar K</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience section-padding">
-            <div class="container">
-                <h3 class="experience-title">Experience</h3>
-
-                <div class="experience-wrapper">
-                    <div class="company-wrapper clearfix">
-                        <div class="experience-title">Connx AI</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-                        <div class="time">May 2022 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-                    </div>
-
-                    <div class="job-wrapper clearfix">
-                        <div class="experience-title">UI & Full- Stack Developer </div> <!-- JOB TITLE  -->
-                        <div class="company-description">
-                            <p>Solutions offers web-based Artificial Intelligence (AI)- and Big Data supported software
-                                solutions and study logistic support for health care organizations, public and private
-                                health care providers as well as physicians in medical care. Our focus is on the
-                                multivariate prediction of disease trajectories to optimize medical decision-making and
-                                to provide a solid database for health policy decisions.</p> <!-- JOB DESCRIPTION  -->
-                        </div>
-                    </div>
-
-                    <div class="company-wrapper clearfix">
-                        <div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-                        <div class="time">Nov 2010 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-                    </div>
-
-                    <div class="job-wrapper clearfix">
-                        <div class="experience-title">Freelance, Web Designer / Web Developer</div> <!-- JOB TITLE  -->
-                        <div class="company-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis,
-                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
-                        </div>
-                    </div>
-
-                    <div class="company-wrapper clearfix">
-                        <div class="experience-title">Company name</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
-                        <div class="time">Nov 2009 - Nov 2010</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
-                    </div>
-
-                    <div class="job-wrapper clearfix">
-                        <div class="experience-title">Web Designer </div> <!-- JOB TITLE  -->
-                        <div class="company-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis,
-                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
-                        </div>
-                    </div>
-
-                </div><!--Skill experience-->
-
-                <div class="section-wrapper clearfix">
-                    <h3 class="section-title">Skills</h3> <!-- YOUR SET OF SKILLS  -->
-                    <ul>
-                        <li class="skill-percentage">HTML / HTML5</li>
-                        <li class="skill-percentage">CSS / CSS3 / SASS / LESS</li>
-                        <li class="skill-percentage">Javascript</li>
-                        <li class="skill-percentage">Jquery</li>
-                        <li class="skill-percentage">Wordpress</li>
-                        <li class="skill-percentage">Photoshop</li>
-
-                    </ul>
-
-                </div>
-
-                <div class="section-wrapper clearfix">
-                    <h3 class="section-title">Hobbies</h3> <!-- DESCRIPTION OF YOUR HOBBIES -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo
-                        in, dignissim magna.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo
-                        in, dignissim magna.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <div class="clearfix"></div>
+  <body>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#home" class="sidebar-link active">Home</a></li>
+        <li><a href="#education" class="sidebar-link">Education</a></li>
+        <li><a href="#skills" class="sidebar-link">Skills</a></li>
+        <li>
+          <a href="#certifications" class="sidebar-link">Certifications</a>
+        </li>
+        <li><a href="#projects" class="sidebar-link">Sample Projects</a></li>
+        <li><a href="#contact" class="sidebar-link">Contact</a></li>
+      </ul>
     </div>
-</body>
 
+    <div class="main-content">
+      <section id="home" class="section home-section">
+        <img
+          src="https://garudacareers.s3.ap-south-1.amazonaws.com/images/student/vinay_github.webp"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <h1 class="intro-title">I am Vinay Kumar</h1>
+        <p class="intro-subtitle">A Full Stack Developer</p>
+        <div class="social-icons">
+          <a
+            href="https://github.com/vinaykuresi"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/vinay-kumar-kuresi"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="education" class="section education-section">
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-item">
+          <h3 class="education-degree">Masters in Computer Applications</h3>
+          <p class="education-institute">
+            Jawaharlal Nehru Technological University
+          </p>
+          <p class="education-duration">July 2015 - May 2018</p>
+          <p class="education-percentage">Percentage: 86%</p>
+        </div>
+
+        <div class="education-item">
+          <h3 class="education-degree">Bachelor in Computer Applications</h3>
+          <p class="education-institute">Dr C.V Raman University</p>
+          <p class="education-duration">2012 - 2015</p>
+          <p class="education-percentage">Percentage: 75%</p>
+        </div>
+
+        <div class="education-item">
+          <h3 class="education-degree">Intermediate (M.P.C)</h3>
+          <p class="education-institute">
+            Andhra Pradesh Board of Secondary and Intermediate Education
+          </p>
+          <p class="education-duration">2010 - 2012</p>
+          <p class="education-percentage">Percentage: 87%</p>
+        </div>
+
+        <div class="education-item">
+          <h3 class="education-degree">SSC</h3>
+          <p class="education-institute">
+            Andhra Pradesh Board of Secondary Education
+          </p>
+          <p class="education-duration">2009 - 2010</p>
+          <p class="education-percentage">Percentage: 90%</p>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-category">
+          <h3>Programming Languages</h3>
+          <div class="skills-items">
+            <div class="skill-item">
+              <i class="fab fa-html5"></i>
+              <p>HTML</p>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <p>CSS</p>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js-square"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <p>Python</p>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-node-js"></i>
+              <p>Node.js</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>FrontEnd Framework</h3>
+          <div class="skills-items">
+            <div class="skill-item">
+              <i class="fab fa-react"></i>
+              <p>React</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>BackEnd Framework</h3>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="./assets/express.png" alt="Express" />
+              <p>Express.js</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/django.png" alt="Django" />
+              <p>Django</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/flask.jpg" alt="Flask" />
+              <p>Flask</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Database</h3>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="./assets/mongodb.png" alt="MongoDB" />
+              <p>MongoDB</p>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <p>MySQL</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Specializations</h3>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="./assets/full_stack.webp" alt="Full Stack" />
+              <p>Full Stack Web Development</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/machine_learning.png" alt="Machine Learning" />
+              <p>Machine Learning</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section certifications-section">
+        <h2 class="section-title">My Certifications</h2>
+        <div class="certifications-carousel">
+          <!-- Certificate items will be injected here by JavaScript -->
+        </div>
+      </section>
+
+      <section id="projects" class="section projects-section">
+        <h2 class="section-title">Sample Projects</h2>
+
+        <div class="project-item">
+          <h3 class="project-title">
+            IA4 Solutions - Skill Development Initiative
+          </h3>
+          <p class="project-description">
+            IA4 Solutions is dedicated to empowering individuals by providing
+            free skill development resources and training opportunities. This
+            initiative supports those who seek to enhance their skills and
+            improve their career prospects.
+          </p>
+
+          <div class="project-links">
+            <a
+              href="https://www.ia4solutions.com"
+              target="_blank"
+              class="project-link"
+              >Visit Website</a
+            >
+            <a
+              href="https://garudacareers.s3.ap-south-1.amazonaws.com/images/student/Ia4solutions.pdf"
+              target="_blank"
+              class="project-link"
+              >Download Brochure</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- More sections like Education, Skills, etc., go here -->
+
+      <section id="contact" class="section contact-section">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-details">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:vinaykuresi@outlook.com">vinaykuresi@outlook.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+918688557572">+91-8688557572</a>
+          </p>
+
+          <div class="social-icons">
+            <a
+              href="https://github.com/vinaykuresi"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/vinay-kumar-kuresi"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
