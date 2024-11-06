@@ -1,7 +1,7 @@
 // Assuming certifications.json is loaded
 const certifications = [
-    ["JavaScript", "Infosys", "https://kuresi.s3.amazonaws.com/Javascript_certification.pdf", "infosys1.png"],
-    ["Python", "Infosys", "https://kuresi.s3.amazonaws.com/Python_certification.pdf", "infosys2.png"],
+    ["JavaScript", "Infosys", "https://kuresi.s3.amazonaws.com/Javascript_certification.pdf", "infosys1.PNG"],
+    ["Python", "Infosys", "https://kuresi.s3.amazonaws.com/Python_certification.pdf", "infosys2.PNG"],
     ["Frontend Developer", "Infosys", "https://kuresi.s3.amazonaws.com/Infosys+FrontEnd+Developer.pdf", "FrontEndDeveloper.png"],
     ["Data Science", "DataCamp", "https://www.datacamp.com/statement-of-accomplishment/track/3d17df317717ba7a4c08fdae8d2c1c0941adc16f", "dataScience.PNG"],
     ["Bot Building", "Google", "https://www.coursera.org/account/accomplishments/certificate/TTFMTNN3LGJX", "botGoogle.PNG"],
